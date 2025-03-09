@@ -59,7 +59,7 @@ function Settings({ setProfileUpdated }) {
     const { name, value, files } = e.target;
     setFormData({
       ...formData,
-      [name]: files ? files[0] : value.trim(),
+      [name]: files ? files[0] : value,
     });
      // URL.createObjectURL(files[0]) creates a temporary URL for the selected file. 
     setPreview(URL.createObjectURL(files[0]));
