@@ -7,7 +7,7 @@ function EventDisplay({data,setData}) {
   // Function to copy event URL
   const handleCopyLink = (urlSlug) => {
     const storedEmail = localStorage.getItem("userEmail");
-    const eventUrl = `http://localhost:5173/OneCal/${storedEmail}/${urlSlug}`; // Construct full URL
+    const eventUrl = `https://onecal-scheduler-deploy-1.onrender.com/OneCal/${storedEmail}/${urlSlug}`; // Construct full URL
     navigator.clipboard.writeText(eventUrl)  // Copy to clipboard
       .then(() => alert("Link copied to clipboard!"))
       .catch(err => console.error("Failed to copy: ", err)); 
