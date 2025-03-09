@@ -82,7 +82,7 @@ function Home({ profileUpdated }) {
         setProfileData({
           username: data.username || "",
           email: data.email || "",
-          profilePhoto: data.profilePhoto ? `${BASE_URL}/${data.profilePhoto}` : null,
+          profilePhoto: data.profilePhoto ? `https://onecal-scheduler-deploy.onrender.com/${data.profilePhoto}` : null,
         });
       } catch (error) {
         console.error("Error fetching details:", error);
