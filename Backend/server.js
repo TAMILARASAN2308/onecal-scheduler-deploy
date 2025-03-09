@@ -9,7 +9,11 @@ const connectDatabase = require('./config/database');
 dotenv.config({ path: path.join(__dirname, 'config', 'config.env') });
 
 // Middleware
-app.use(cors()); 
+app.use(cors({
+    origin: "https://visionary-queijadas-f80d14.netlify.app", 
+    credentials: true
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
